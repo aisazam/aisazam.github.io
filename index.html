@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <title>NewGraphics Administration</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="title">Sitio web para administrar pedidos</h1>
+
+        <div id="Panel_Acciones" class="box">
+            <button onclick="agregarContacto();">Agregar Nuevo Pedido</button>
+        </div>
+
+        <form id="trabajo" style="display: none;"> 
+            <table>
+                <tr>
+                    <th><label for="txtNombre">Nombre</label></th>
+                    <td><input type="text" id="txtNombre"/></td>
+                </tr>
+                <tr>
+                    <th><label for="txtCantidad">Cantidad</label></th>
+                    <td><input type="text" id="txtCantidad"/></td>
+                </tr>
+                <tr>
+                    <th><label for="date">Fecha de entrega</label></th>
+                    <td><input type="date" id="date"/></td>
+                </tr>
+            </table>
+        </form>
+
+        <button id="guardar" style="display: none;" onclick="guardar();">Guardar</button>
+
+        <div class="schedule__container" id="contenedorPrincipal">
+            <div class="calendar__info">
+                <div class="calendar__prev" id="prev-month">&#9664;</div>
+                <div class="calendar__month" id="month"></div>
+                <div class="calendar__year" id="year"></div>
+                <div class="calendar__next" id="next-month">&#9654;</div>
+            </div>
+
+            <div class="days__container">
+                <span class="corner"></span>
+                <div class="day" id="days_0">Domingo </div>
+                <div class="day" id="days_1">Lunes </div>
+                <div class="day" id="days_2">Martes </div>
+                <div class="day" id="days_3">Miercoles </div>
+                <div class="day" id="days_4">Jueves </div>
+                <div class="day" id="days_5">Viernes </div>
+                <div class="day" id="days_6">Sabado </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="configuration.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
